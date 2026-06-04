@@ -1,0 +1,76 @@
+name: Deploy Aether Workshop Wiki
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+concurrency:
+  group: aether-workshop-wiki-deploy
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: '1.1.6'
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Build site
+        run: bun run docs:build
+
+      - name: Resolve deploy settings
+        env:
+          INPUT_DEPLOY_HOST: ${{ vars.DEPLOY_HOST }}
+          INPUT_DEPLOY_PATH: ${{ vars.DEPLOY_PATH }}
+          INPUT_DEPLOY_WEB_ROOT: ${{ vars.DEPLOY_WEB_ROOT }}
+          INPUT_DEPLOY_PORT: ${{ secrets.DEPLOY_PORT }}
+        run: |
+          echo "DEPLOY_HOST=${INPUT_DEPLOY_HOST:-wiki.chengxin.design}" >> "$GITHUB_ENV"
+          echo "DEPLOY_PATH=${INPUT_DEPLOY_PATH:-/www/wwwroot/aether-workshop-wiki-source}" >> "$GITHUB_ENV"
+          echo "DEPLOY_WEB_ROOT=${INPUT_DEPLOY_WEB_ROOT:-/www/wwwroot/wiki.chengxin.design}" >> "$GITHUB_ENV"
+          echo "DEPLOY_PORT=${INPUT_DEPLOY_PORT:-22}" >> "$GITHUB_ENV"
+
+      - name: Configure SSH
+        env:
+          DEPLOY_SSH_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
+          DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
+        run: |
+          test -n "$DEPLOY_SSH_KEY"
+          test -n "$DEPLOY_USER"
+          mkdir -p ~/.ssh
+          printf '%s\n' "$DEPLOY_SSH_KEY" > ~/.ssh/aether_wiki_deploy
+          chmod 600 ~/.ssh/aether_wiki_deploy
+          ssh-keyscan -p "$DEPLOY_PORT" "$DEPLOY_HOST" >> ~/.ssh/known_hosts
+
+      - name: Update server checkout
+        env:
+          DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
+        run: |
+          ssh -i ~/.ssh/aether_wiki_deploy -p "$DEPLOY_PORT" "$DEPLOY_USER@$DEPLOY_HOST" "
+            set -e
+            if [ ! -d \"$DEPLOY_PATH/.git\" ]; then
+              mkdir -p \"\$(dirname \"$DEPLOY_PATH\")\"
+              git clone \"https://github.com/${GITHUB_REPOSITORY}.git\" \"$DEPLOY_PATH\"
+            fi
+            cd \"$DEPLOY_PATH\"
+            git checkout main
+            git pull --ff-only origin main
+          "
+
+      - name: Publish static files
+        env:
+          DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
+        run: |
+          ssh -i ~/.ssh/aether_wiki_deploy -p "$DEPLOY_PORT" "$DEPLOY_USER@$DEPLOY_HOST" "mkdir -p \"$DEPLOY_WEB_ROOT\""
+          rsync -az --delete -e "ssh -i ~/.ssh/aether_wiki_deploy -p $DEPLOY_PORT" docs/dist/ "$DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_WEB_ROOT/"

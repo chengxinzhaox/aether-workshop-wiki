@@ -1,0 +1,66 @@
+<svg width="1440" height="900" viewBox="0 0 1440 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1440" height="900" rx="34" fill="#F8F9FB"/>
+  <rect x="32" y="32" width="1376" height="836" rx="26" fill="white"/>
+  <rect x="32" y="32" width="1376" height="64" rx="26" fill="#F7F7F8"/>
+  <circle cx="68" cy="64" r="7" fill="#FF6674"/>
+  <circle cx="91" cy="64" r="7" fill="#F3C257"/>
+  <circle cx="114" cy="64" r="7" fill="#5FD58C"/>
+  <rect x="156" y="53" width="172" height="22" rx="11" fill="#EDEEF0"/>
+  <rect x="360" y="53" width="96" height="22" rx="11" fill="#EDEEF0"/>
+  <rect x="480" y="53" width="134" height="22" rx="11" fill="#EDEEF0"/>
+  <rect x="1186" y="48" width="164" height="32" rx="16" fill="#0B0B0B"/>
+  <rect x="64" y="128" width="212" height="708" rx="18" fill="#111111"/>
+  <rect x="86" y="158" width="110" height="36" rx="8" fill="#2A2A2A"/>
+  <rect x="86" y="220" width="138" height="16" rx="8" fill="#3A3A3A"/>
+  <rect x="86" y="264" width="116" height="16" rx="8" fill="#303030"/>
+  <rect x="86" y="308" width="150" height="16" rx="8" fill="#303030"/>
+  <rect x="308" y="128" width="1068" height="708" rx="18" fill="#FBFCFD"/>
+  <g opacity="0.62">
+    <path d="M340 160H1356" stroke="#D9DEE7"/>
+    <path d="M340 216H1356" stroke="#E6E9EF"/>
+    <path d="M340 272H1356" stroke="#E6E9EF"/>
+    <path d="M340 328H1356" stroke="#E6E9EF"/>
+    <path d="M340 384H1356" stroke="#E6E9EF"/>
+    <path d="M340 440H1356" stroke="#E6E9EF"/>
+    <path d="M340 496H1356" stroke="#E6E9EF"/>
+    <path d="M340 552H1356" stroke="#E6E9EF"/>
+    <path d="M340 608H1356" stroke="#E6E9EF"/>
+    <path d="M340 664H1356" stroke="#E6E9EF"/>
+    <path d="M340 720H1356" stroke="#E6E9EF"/>
+    <path d="M396 160V812" stroke="#E6E9EF"/>
+    <path d="M452 160V812" stroke="#E6E9EF"/>
+    <path d="M508 160V812" stroke="#E6E9EF"/>
+    <path d="M564 160V812" stroke="#E6E9EF"/>
+    <path d="M620 160V812" stroke="#E6E9EF"/>
+    <path d="M676 160V812" stroke="#E6E9EF"/>
+    <path d="M732 160V812" stroke="#E6E9EF"/>
+    <path d="M788 160V812" stroke="#E6E9EF"/>
+    <path d="M844 160V812" stroke="#E6E9EF"/>
+    <path d="M900 160V812" stroke="#E6E9EF"/>
+    <path d="M956 160V812" stroke="#E6E9EF"/>
+    <path d="M1012 160V812" stroke="#E6E9EF"/>
+    <path d="M1068 160V812" stroke="#E6E9EF"/>
+    <path d="M1124 160V812" stroke="#E6E9EF"/>
+    <path d="M1180 160V812" stroke="#E6E9EF"/>
+    <path d="M1236 160V812" stroke="#E6E9EF"/>
+    <path d="M1292 160V812" stroke="#E6E9EF"/>
+  </g>
+  <path d="M558 308H692C718 308 730 320 730 346V410C730 436 742 448 768 448H850" stroke="#757575" stroke-width="3" stroke-linecap="round"/>
+  <path d="M558 308H668C694 308 706 320 706 346V540C706 566 718 578 744 578H876" stroke="#757575" stroke-width="3" stroke-linecap="round"/>
+  <path d="M968 448H1126" stroke="#757575" stroke-width="3" stroke-linecap="round"/>
+  <rect x="420" y="238" width="190" height="110" rx="14" fill="white" stroke="#4ED6AF" stroke-width="2"/>
+  <text x="515" y="282" text-anchor="middle" fill="#71757C" font-family="-apple-system,BlinkMacSystemFont,Helvetica" font-size="18">Sense</text>
+  <text x="515" y="316" text-anchor="middle" fill="#080808" font-family="-apple-system,BlinkMacSystemFont,Helvetica" font-size="27" font-weight="650">Distance</text>
+  <rect x="818" y="392" width="190" height="110" rx="14" fill="white" stroke="#F0BE4E" stroke-width="2"/>
+  <text x="913" y="436" text-anchor="middle" fill="#71757C" font-family="-apple-system,BlinkMacSystemFont,Helvetica" font-size="18">Logic</text>
+  <text x="913" y="470" text-anchor="middle" fill="#080808" font-family="-apple-system,BlinkMacSystemFont,Helvetica" font-size="27" font-weight="650">If / Switch</text>
+  <rect x="1126" y="392" width="190" height="110" rx="14" fill="white" stroke="#6F8CFF" stroke-width="2"/>
+  <text x="1221" y="436" text-anchor="middle" fill="#71757C" font-family="-apple-system,BlinkMacSystemFont,Helvetica" font-size="18">Act</text>
+  <text x="1221" y="470" text-anchor="middle" fill="#080808" font-family="-apple-system,BlinkMacSystemFont,Helvetica" font-size="27" font-weight="650">LED pulse</text>
+  <rect x="512" y="600" width="424" height="132" rx="22" fill="white"/>
+  <rect x="512" y="600" width="424" height="132" rx="22" stroke="#EEF0F4"/>
+  <text x="548" y="652" fill="#080808" font-family="-apple-system,BlinkMacSystemFont,Helvetica" font-size="24">When distance is near, pulse light.</text>
+  <text x="548" y="696" fill="#9AA0A8" font-family="-apple-system,BlinkMacSystemFont,Helvetica" font-size="18">Aether AI staged graph</text>
+  <circle cx="884" cy="668" r="30" fill="#080808"/>
+  <text x="884" y="675" text-anchor="middle" fill="white" font-family="-apple-system,BlinkMacSystemFont,Helvetica" font-size="14" font-weight="700">Run</text>
+</svg>

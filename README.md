@@ -1,69 +1,65 @@
-<p align="center">
-    <br />
-    <img src="https://raw.githubusercontent.com/lucas-labs/lucode-starlight-theme/refs/heads/master/docs/src/assets/logo.svg" alt="Lucode Starlight Theme" width="64" />
-    <br />
-    <strong>Lucode Starlight Theme</strong>
-    <br />
-    An Astro Starlight theme inspired by <code>shadcn/ui</code>.
-    <br />
-    <a href="https://lucas-labs.github.io/lucode-starlight-theme">Preview/docs</a> · <a href="https://www.npmjs.com/package/lucode-starlight">Npm</a>
-</p>
+# Aether Workshop Wiki
 
-<br />
+This repository contains the bilingual product Wiki for Aether Workshop. It is built with Astro Starlight and the `lucode-starlight` theme template.
 
-<p align="center">
-<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/e5b26cbb-cd44-494e-8d15-f9c44a5c0d04" />
-</p>
+Live site: <https://wiki.chengxin.design>
 
-# Lucode Starlight Theme
-
-[shadcn/ui](https://ui.shadcn.com/) inspired Starlight theme.
-
-## Attribution
-
-This [Starlight](https://starlight.astro.build/) theme recreates the design of the documentation site for [shadcn/ui](https://ui.shadcn.com/) (as of April 2026). I used the great [adrian-ub/starlight-theme-black](https://github.com/adrian-ub/starlight-theme-black) as a base, which brought an earlier **shadcn/ui**-inspired design to Astro Starlight.
-
-## This Repository
-
-This repo is a Bun workspace monorepo for the theme itself and its documentation site.
-
-The repository contains:
-
-- `packages/lucode-starlight`: the published Starlight theme plugin.
-- `docs`: the documentation site for the theme
-
-### Workspace
+## Structure
 
 ```txt
-./
-├─ docs/
-│   └─ documentation site for this theme
-└─ packages/
-    └─ lucode-starlight/
-        └─ theme package
+.
+├─ docs/                         # Astro Starlight documentation site
+│  ├─ src/content/docs/           # English and Chinese Wiki pages
+│  ├─ public/assets/              # App logo, screenshots, fonts, diagrams
+│  └─ astro.config.mjs            # Starlight + lucode theme config
+├─ packages/lucode-starlight/     # Vendored template theme package
+└─ .github/workflows/deploy.yml   # Build and SSH deploy workflow
 ```
 
-### Theme Package
+## Local Development
 
-The package lives in `packages/lucode-starlight` and is published as `lucode-starlight` on npm.
+```bash
+bun install
+bun run dev
+```
 
-See [packages/lucode-starlight/README.md](packages/lucode-starlight/README.md) for details on the theme package.
+Build:
 
-## Documentation Site
+```bash
+bun run docs:build
+```
 
-The docs site is in `docs` and is built with Astro Starlight using the local theme package.
+Preview the production build:
 
-Also serves as a live preview of the theme.
+```bash
+bun run preview -- --host 127.0.0.1 --port 4321
+```
 
-<br />
-<br />
-<hr />
+## Content Model
 
-<p align="center">
-    <br/><br />
-    <a href="https://lucode.dev">
-        <img src="https://raw.githubusercontent.com/lucas-labs/lucode-starlight-theme/refs/heads/master/docs/src/assets/logo.svg" alt="Lucode" width="32" />
-    </a>
-    <br />
-    <br />
-</p>
+English pages live at `docs/src/content/docs/`.
+
+Chinese pages live at `docs/src/content/docs/zh/`.
+
+When a product feature changes, update the English and Chinese page pair in the same pull request where possible.
+
+## Deployment
+
+The GitHub Actions workflow builds the site on each push to `main`, updates a server-side source checkout, and syncs `docs/dist/` to the web root.
+
+Required repository secrets:
+
+- `DEPLOY_USER`: SSH username for the server.
+- `DEPLOY_SSH_KEY`: private key used by GitHub Actions for deployment.
+
+Optional repository secret:
+
+- `DEPLOY_PORT`: SSH port. Defaults to `22`.
+
+Optional repository variables:
+
+- `DEPLOY_HOST`: defaults to `wiki.chengxin.design`.
+- `DEPLOY_PATH`: server source checkout, defaults to `/www/wwwroot/aether-workshop-wiki-source`.
+- `DEPLOY_WEB_ROOT`: static site root, defaults to `/www/wwwroot/wiki.chengxin.design`.
+
+Do not commit private keys or API credentials.

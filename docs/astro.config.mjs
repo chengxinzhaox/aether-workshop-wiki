@@ -3,35 +3,41 @@ import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import lucode from 'lucode-starlight';
 
-// https://astro.build/config
-const docsBasePath = process.env.DOCS_BASE_PATH ?? '/lucode-starlight-theme';
-
 export default defineConfig({
-    site: 'https://lucas-labs.github.io',
-    base: docsBasePath,
+    site: 'https://wiki.chengxin.design',
 
     integrations: [
         starlight({
-            title: 'Lucode Starlight',
+            title: 'Aether Workshop Wiki',
             logo: {
-                src: './src/assets/logo.svg',
-                alt: 'Lucode logo',
-                replacesTitle: true,
+                src: './src/assets/aether-logo.png',
+                alt: 'Aether Workshop logo',
             },
             customCss: ['./src/styles/global.css'],
             editLink: {
-                baseUrl: 'https://github.com/lucas-labs/lucode-starlight-theme/edit/master/docs',
+                baseUrl: 'https://github.com/chengxinzhaox/aether-workshop-wiki/edit/main/docs',
             },
             lastUpdated: true,
+            locales: {
+                root: {
+                    label: 'English',
+                    lang: 'en',
+                },
+                zh: {
+                    label: '简体中文',
+                    lang: 'zh-CN',
+                },
+            },
             plugins: [
                 lucode({
                     docs: {
                         includeAiUtilities: true,
                     },
                     navLinks: [
-                        { label: 'Docs', link: '/guides/getting-started/' },
-                        { label: 'Showcase', link: '/showcase/starlight-components/' },
-                        { label: 'API', link: '/reference/plugin-api/' },
+                        { label: 'Start', link: '/quick-start/' },
+                        { label: 'AI', link: '/ai/project-ai/' },
+                        { label: 'Cloud', link: '/cloud/overview/' },
+                        { label: '中文', link: '/zh/' },
                     ],
                 }),
             ],
@@ -39,41 +45,55 @@ export default defineConfig({
                 {
                     icon: 'github',
                     label: 'GitHub',
-                    href: 'https://github.com/lucas-labs/lucode-starlight-theme',
+                    href: 'https://github.com/chengxinzhaox/aether-workshop-wiki',
                 },
             ],
             sidebar: [
                 {
                     label: 'Start Here',
                     items: [
-                        { label: 'Getting Started', link: '/guides/getting-started/' },
-                        { label: 'Configuration', link: '/guides/configuration/' },
-                        { label: 'Customize the Theme', link: '/guides/theming/' },
+                        { label: 'Quick Start', link: '/quick-start/' },
+                        { label: 'Install and Configure', link: '/install-and-configure/' },
+                        { label: 'Interface Overview', link: '/interface-overview/' },
+                        { label: 'Core Concepts', link: '/core-concepts/' },
                     ],
                 },
                 {
-                    label: 'Showcase',
+                    label: 'Feature Guides',
                     items: [
-                        { label: 'Starlight Components', link: '/showcase/starlight-components/' },
-                        { label: 'Splash Pages', link: '/showcase/splash-pages/' },
-                        { label: 'Typography', link: '/showcase/typography/' },
+                        { label: 'Project Canvas', link: '/features/project-canvas/' },
+                        { label: 'Hardware and Ports', link: '/features/hardware-and-ports/' },
+                        { label: 'Component Library', link: '/features/component-library/' },
+                        { label: 'Capsules', link: '/features/capsules/' },
+                        { label: 'Code, Verify, Upload', link: '/features/code-upload/' },
+                        { label: 'Serial, Media, Face Detection', link: '/features/serial-media-face/' },
                     ],
                 },
                 {
-                    label: 'Splash Examples',
+                    label: 'AI Workflows',
                     items: [
-                        { label: 'Centered', link: '/showcase/splash/centered/' },
-                        { label: 'Centered Top', link: '/showcase/splash/centered-top/' },
-                        { label: 'Split Left', link: '/showcase/splash/split-left/' },
-                        { label: 'Split Right', link: '/showcase/splash/split-right/' },
-                        { label: 'Banner', link: '/showcase/splash/banner/' },
+                        { label: 'Project AI', link: '/ai/project-ai/' },
+                        { label: 'Library AI', link: '/ai/library-ai/' },
+                        { label: 'AI Settings', link: '/ai/settings/' },
                     ],
                 },
                 {
-                    label: 'Reference',
+                    label: 'Projects and Cloud',
                     items: [
-                        { label: 'Theme Components', link: '/reference/components/' },
-                        { label: 'Plugin API', link: '/reference/plugin-api/' },
+                        { label: 'Project Files and History', link: '/projects/files-history/' },
+                        { label: 'Cloud Libraries', link: '/cloud/overview/' },
+                        { label: 'Component and Capsule History', link: '/cloud/history/' },
+                    ],
+                },
+                {
+                    label: 'Guides and Reference',
+                    items: [
+                        { label: 'Workflow Tutorials', link: '/tutorials/workflows/' },
+                        { label: 'Settings and Environment', link: '/reference/settings-environment/' },
+                        { label: 'Troubleshooting', link: '/reference/troubleshooting/' },
+                        { label: 'FAQ', link: '/reference/faq/' },
+                        { label: 'Advanced Users', link: '/reference/advanced/' },
+                        { label: 'Release Notes', link: '/reference/release-notes/' },
                     ],
                 },
             ],

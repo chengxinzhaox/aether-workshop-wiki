@@ -1,0 +1,19 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="760" rx="30" fill="#F7F8FA"/>
+  <rect x="42" y="42" width="1116" height="676" rx="24" fill="#101010"/>
+  <text x="84" y="108" fill="white" font-family="-apple-system,BlinkMacSystemFont,Helvetica" font-size="28" font-weight="650">Arduino Output</text>
+  <text x="84" y="152" fill="#9AA0A8" font-family="-apple-system,BlinkMacSystemFont,Helvetica" font-size="18">Generated from graph, components, Capsule expansion, and port mapping.</text>
+  <rect x="84" y="204" width="640" height="424" rx="18" fill="#171717" stroke="#303030"/>
+  <text x="118" y="260" fill="#DFFDEA" font-family="SFMono-Regular,Menlo,monospace" font-size="18">#include &lt;Servo.h&gt;</text>
+  <text x="118" y="306" fill="#DFFDEA" font-family="SFMono-Regular,Menlo,monospace" font-size="18">void setup() {</text>
+  <text x="148" y="350" fill="#DFFDEA" font-family="SFMono-Regular,Menlo,monospace" font-size="18">setupDistance();</text>
+  <text x="148" y="394" fill="#DFFDEA" font-family="SFMono-Regular,Menlo,monospace" font-size="18">setupLedRing();</text>
+  <text x="118" y="438" fill="#DFFDEA" font-family="SFMono-Regular,Menlo,monospace" font-size="18">}</text>
+  <text x="118" y="502" fill="#DFFDEA" font-family="SFMono-Regular,Menlo,monospace" font-size="18">void loop() { readSense(); readAct(); }</text>
+  <rect x="774" y="204" width="300" height="88" rx="16" fill="#1B1B1B" stroke="#303030"/>
+  <text x="810" y="258" fill="white" font-family="-apple-system,BlinkMacSystemFont,Helvetica" font-size="22" font-weight="650">Compile ready</text>
+  <rect x="774" y="324" width="300" height="88" rx="16" fill="#1B1B1B" stroke="#303030"/>
+  <text x="810" y="378" fill="white" font-family="-apple-system,BlinkMacSystemFont,Helvetica" font-size="22" font-weight="650">Upload to board</text>
+  <rect x="774" y="444" width="300" height="88" rx="16" fill="#1B1B1B" stroke="#303030"/>
+  <text x="810" y="498" fill="white" font-family="-apple-system,BlinkMacSystemFont,Helvetica" font-size="22" font-weight="650">Serial monitor</text>
+</svg>

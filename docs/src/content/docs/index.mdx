@@ -1,18 +1,22 @@
 ---
-title: Lucode Starlight
-description: A clean, component-driven theme for Astro Starlight, inspired by shadcn/ui and designed for product documentation.
+title: Aether Workshop Wiki
+description: Product documentation for Aether Workshop, the visual hardware creation workspace for makers, educators, and advanced builders.
 template: splash
 hero:
-  tagline: Give Starlight a sharper product-docs interface with polished navigation, restrained typography, splash pages, and carefully tuned built-in components.
+  layout: split-left
+  tagline: Learn Aether Workshop from first launch to cloud library workflows, AI-assisted component design, project history, Arduino upload, and deployment-ready hardware prototypes.
+  image:
+    file: ../../assets/aether-main-workspace.webp
+    alt: Aether Workshop project canvas
   announcement:
-    text: Built for Astro Starlight 0.38+
-    link: /lucode-starlight-theme/guides/getting-started/
+    text: Bilingual product Wiki
+    link: /zh/
   actions:
-    - text: Install the Theme
-      link: /lucode-starlight-theme/guides/getting-started/
+    - text: Quick Start
+      link: /quick-start/
       icon: right-arrow
-    - text: Explore the Showcase
-      link: /lucode-starlight-theme/showcase/starlight-components/
+    - text: Chinese Docs
+      link: /zh/
       variant: minimal
 ---
 
@@ -21,20 +25,20 @@ import { ContainerSection } from 'lucode-starlight/components';
 
 <ContainerSection>
 
-## What the Theme Changes
+## Choose Your Path
 
 <CardGrid>
-  <Card title="Starlight-native" icon="starlight">
-    Lucode Starlight is a Starlight plugin. Keep the content collections, sidebar config, search, i18n, and MDX workflow you already know.
+  <Card title="Build a First Project" icon="rocket">
+    Open [Quick Start](/quick-start/) for the shortest path from a blank canvas to verified Arduino code.
   </Card>
-  <Card title="Opinionated UI" icon="setting">
-    Header, sidebar, footer, search, hero, page frame, pagination, and markdown rendering are replaced with a tighter design system.
+  <Card title="Understand the Workspace" icon="open-book">
+    Use [Interface Overview](/interface-overview/) and [Core Concepts](/core-concepts/) to map each tab, panel, project file, component, and Capsule.
   </Card>
-  <Card title="Token-based theming" icon="setting">
-    Colors, spacing, radii, container width, and component surfaces are driven by CSS custom properties that you can override per site.
+  <Card title="Use AI Safely" icon="setting">
+    Configure providers in [AI Settings](/ai/settings/), then use [Project AI](/ai/project-ai/) and [Library AI](/ai/library-ai/) with confirmation steps.
   </Card>
-  <Card title="Splash pages" icon="rocket">
-    Use Starlight's splash template with Lucode hero layouts for landing pages, product pages, and docs entry points.
+  <Card title="Collaborate Through Cloud Libraries" icon="starlight">
+    Start with [Cloud Libraries](/cloud/overview/) and the [History Guide](/cloud/history/) for roles, commits, component versions, and Capsule versions.
   </Card>
 </CardGrid>
 
@@ -42,33 +46,32 @@ import { ContainerSection } from 'lucode-starlight/components';
 
 <ContainerSection>
 
-## Attribution
+## What This Wiki Covers
 
-Lucode Starlight recreates the design of [shadcn/ui's documentation site](https://ui.shadcn.com/). The package also uses [adrian-ub/starlight-theme-black](https://github.com/adrian-ub/starlight-theme-black) as a base, which brought an earlier shadcn/ui-inspired design to Astro Starlight.
+This Wiki is written for normal users who want a reliable hardware-building flow and for advanced users who maintain libraries, write custom Arduino snippets, or manage shared cloud packages. It documents:
 
-This project is not affiliated with shadcn/ui or starlight-theme-black.
+- Installing Aether Workshop and preparing Arduino CLI, boards, ports, dependencies, and API keys.
+- The Home, Project, Library, Capsules, and Setting tabs.
+- Visual graph editing, hardware mapping, code generation, upload, serial monitor, media playback, and legacy camera/face-detection support.
+- Component and Capsule authoring, including source libraries, UI elements, private libraries, AI profiles, project overrides, and version history.
+- Project comments, pins, change logs, snapshots, and saved `.aew` package structure.
+- Cloud library creation, member roles, invitations, pushes, pulls, remote update handling, and package export/import.
+
+Where the app source contains legacy or hidden modules, the docs say so explicitly instead of presenting them as first-class visible features.
 
 </ContainerSection>
 
 <ContainerSection>
 
-## Documentation Map
+## Recommended Reading Order
 
-This site is the theme manual and the theme preview at the same time. Start with installation, then use the showcase pages as visual QA while you customize tokens and author content.
-
-<CardGrid>
-  <Card title="Install and configure" icon="rocket">
-    Follow the plugin setup, content schema extension, and recommended Starlight options in [Getting Started](/lucode-starlight-theme/guides/getting-started/).
-  </Card>
-  <Card title="Customize the interface" icon="setting">
-    Learn which plugin options and CSS tokens are available in [Configuration](/lucode-starlight-theme/guides/configuration/) and [Customize the Theme](/lucode-starlight-theme/guides/theming/).
-  </Card>
-  <Card title="Inspect every state" icon="magnifier">
-    Compare cards, asides, tabs, badges, code blocks, file trees, and buttons in [Starlight Components](/lucode-starlight-theme/showcase/starlight-components/).
-  </Card>
-  <Card title="Pick a landing layout" icon="open-book">
-    Browse the live hero layouts in [Splash Pages](/lucode-starlight-theme/showcase/splash-pages/) before choosing one for your docs homepage.
-  </Card>
-</CardGrid>
+1. [Install and Configure](/install-and-configure/)
+2. [Project Canvas](/features/project-canvas/)
+3. [Hardware and Ports](/features/hardware-and-ports/)
+4. [Code, Verify, Upload](/features/code-upload/)
+5. [Project Files and History](/projects/files-history/)
+6. [Component Library](/features/component-library/)
+7. [Capsules](/features/capsules/)
+8. [Cloud Libraries](/cloud/overview/)
 
 </ContainerSection>

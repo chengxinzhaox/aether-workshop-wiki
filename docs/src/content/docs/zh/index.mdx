@@ -1,0 +1,77 @@
+---
+title: Aether Workshop Wiki
+description: Aether Workshop 双语产品 Wiki，覆盖可视化硬件项目、组件库、Capsule、AI、云仓库、历史和排障。
+template: splash
+hero:
+  layout: split-left
+  tagline: 从第一次启动到云端组件库、AI 辅助组件设计、项目历史、Arduino 上传和可维护硬件原型，系统学习 Aether Workshop。
+  image:
+    file: ../../../assets/aether-main-workspace.webp
+    alt: Aether Workshop 项目画布
+  announcement:
+    text: English documentation
+    link: /
+  actions:
+    - text: 快速开始
+      link: /zh/quick-start/
+      icon: right-arrow
+    - text: English
+      link: /
+      variant: minimal
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+import { ContainerSection } from 'lucode-starlight/components';
+
+<ContainerSection>
+
+## 从哪里开始
+
+<CardGrid>
+  <Card title="做第一个项目" icon="rocket">
+    阅读[快速开始](/zh/quick-start/)，从空白画布走到 Arduino 代码验证。
+  </Card>
+  <Card title="理解主界面" icon="open-book">
+    用[界面总览](/zh/interface-overview/)和[核心概念](/zh/core-concepts/)认识每个入口、面板、项目文件、组件和 Capsule。
+  </Card>
+  <Card title="安全使用 AI" icon="setting">
+    先配置[AI 设置](/zh/ai/settings/)，再使用[项目 AI](/zh/ai/project-ai/)和[组件库 AI](/zh/ai/library-ai/)。
+  </Card>
+  <Card title="维护云仓库" icon="starlight">
+    从[云仓库](/zh/cloud/overview/)和[历史功能](/zh/cloud/history/)开始，理解角色、提交、版本和同步。
+  </Card>
+</CardGrid>
+
+</ContainerSection>
+
+<ContainerSection>
+
+## 本 Wiki 覆盖什么
+
+本文档面向普通用户和进阶用户。普通用户可以按步骤完成硬件项目；进阶用户可以维护组件库、编写 Arduino 代码片段、管理 Capsule 和云端库。
+
+- 安装 Aether Workshop，准备 Arduino CLI、开发板、端口、依赖和 API key。
+- Home、Project、Library、Capsules、Setting 五个主入口。
+- 可视化节点编辑、硬件映射、代码生成、上传、串口监视器、媒体播放和遗留/条件性的摄像头相关模块说明。
+- 组件和 Capsule 的创建、编辑、历史、云端共享与项目覆盖。
+- 项目评论、Pin、Change Log、History，以及 `.aew` 项目包结构。
+- 云仓库创建、成员角色、邀请链接、push/pull、远端更新和 `.aetherlib` 导入导出。
+
+如果源码中存在旧模块或隐藏入口，文档会明确说明，不会把它们写成当前默认可见功能。
+
+</ContainerSection>
+
+<ContainerSection>
+
+## 推荐阅读顺序
+
+1. [安装与配置](/zh/install-and-configure/)
+2. [项目画布](/zh/features/project-canvas/)
+3. [硬件与端口](/zh/features/hardware-and-ports/)
+4. [代码、验证与上传](/zh/features/code-upload/)
+5. [项目文件与历史](/zh/projects/files-history/)
+6. [组件库](/zh/features/component-library/)
+7. [Capsules](/zh/features/capsules/)
+8. [云仓库](/zh/cloud/overview/)
+
+</ContainerSection>

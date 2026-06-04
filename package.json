@@ -1,24 +1,25 @@
 {
-    "name": "lucode-starlight",
-    "description": "Lucode's theme for Starlight (the Astro native documentation site generator)",
-    "module": "index.ts",
-    "type": "module",
-    "license": "MIT",
-    "workspaces": [
-        "packages/*",
-        "docs/"
-    ],
-    "scripts": {
-        "docs": "bun run --filter lucode-starlight-docs dev",
-        "dev": "bun run --filter lucode-starlight-docs dev",
-        "docs:build": "bun run --filter lucode-starlight-docs build",
-        "test": "vitest run --coverage"
-    },
-    "devDependencies": {
-        "@antfu/eslint-config": "^9.0.0",
-        "@vitest/coverage-v8": "^4.1.7",
-        "astro": "^6.1.9",
-        "jsdom": "^29.1.1",
-        "vitest": "^4.1.7"
-    }
+  "name": "aether-workshop-wiki",
+  "description": "Bilingual product Wiki for Aether Workshop.",
+  "type": "module",
+  "private": true,
+  "license": "MIT",
+  "workspaces": [
+    "packages/*",
+    "docs/"
+  ],
+  "scripts": {
+    "dev": "bun run --filter aether-workshop-wiki-docs dev",
+    "build": "bun run --filter aether-workshop-wiki-docs build",
+    "preview": "bun run --filter aether-workshop-wiki-docs preview",
+    "docs:build": "bun run --filter aether-workshop-wiki-docs build",
+    "test": "vitest run --coverage"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^9.0.0",
+    "@vitest/coverage-v8": "^4.1.7",
+    "astro": "^6.1.9",
+    "jsdom": "^29.1.1",
+    "vitest": "^4.1.7"
+  }
 }
