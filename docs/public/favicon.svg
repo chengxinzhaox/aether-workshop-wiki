@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Aether Workshop">
+  <rect width="64" height="64" rx="14" fill="#0b3f3c"/>
+  <path d="M18 12c10 2 17 10 17 22 0 11-7 18-17 18V12Z" fill="#7de2d1"/>
+  <path d="M38 12c7 4 11 11 11 20 0 10-4 16-11 20V12Z" fill="#f4c95d"/>
+</svg>

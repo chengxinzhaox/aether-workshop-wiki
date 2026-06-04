@@ -33,6 +33,8 @@ export default defineConfig({
                     docs: {
                         includeAiUtilities: true,
                     },
+                    footerText:
+                        'Aether Workshop Wiki documents the current Aether Workshop product, source-backed workflows, and bilingual user guidance.',
                     navLinks: [
                         { label: 'Start', link: '/quick-start/' },
                         { label: 'AI', link: '/ai/project-ai/' },
