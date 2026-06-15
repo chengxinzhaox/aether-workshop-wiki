@@ -10,8 +10,9 @@ export default defineConfig({
         starlight({
             title: 'Aether Workshop Wiki',
             logo: {
-                src: './src/assets/aether-logo.png',
+                src: './src/assets/aether-wiki-logo.svg',
                 alt: 'Aether Workshop logo',
+                replacesTitle: true,
             },
             customCss: ['./src/styles/global.css'],
             editLink: {
@@ -35,20 +36,7 @@ export default defineConfig({
                     },
                     footerText:
                         'Aether Workshop Wiki documents the current Aether Workshop product, source-backed workflows, and bilingual user guidance.',
-                    navLinks: [
-                        { label: 'Start', link: '/quick-start/' },
-                        { label: 'AI', link: '/ai/project-ai/' },
-                        { label: 'Cloud', link: '/cloud/overview/' },
-                        { label: '中文', link: '/zh/' },
-                    ],
                 }),
-            ],
-            social: [
-                {
-                    icon: 'github',
-                    label: 'GitHub',
-                    href: 'https://github.com/chengxinzhaox/aether-workshop-wiki',
-                },
             ],
             sidebar: [
                 {

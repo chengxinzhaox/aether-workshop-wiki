@@ -22,5 +22,8 @@ bun-debug.log*
 # macOS-specific files
 .DS_Store
 
+# IDE-specific files
+.idea/
+
 # scripts
 scripts/

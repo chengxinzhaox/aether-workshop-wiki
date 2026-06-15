@@ -63,6 +63,12 @@ code {
     border-radius: 5px;
 }
 
+header .site-title img.logo {
+    width: 94px;
+    max-width: 94px !important;
+    max-height: 32px !important;
+}
+
 [lang='zh-CN'] .sl-markdown-content {
     line-height: 1.85;
 }
