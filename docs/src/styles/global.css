@@ -64,9 +64,11 @@ code {
 }
 
 header .site-title img.logo {
-    width: 94px;
-    max-width: 94px !important;
-    max-height: 32px !important;
+    width: 73px;
+    height: 24.86px;
+    max-width: 73px !important;
+    max-height: 24.86px !important;
+    object-fit: contain;
 }
 
 [lang='zh-CN'] .sl-markdown-content {
